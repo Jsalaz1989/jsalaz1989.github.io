@@ -1,0 +1,20 @@
+/* #path1316:hover { */
+    /* fill: #DA4567; */
+    /* background-color: #DA4567; */
+/* } */
+
+/* #nandBody:hover {
+    cursor: grab;
+} */
+
+.static {
+    cursor: not-allowed;
+}
+.draggable {
+    cursor: move;
+}
+
+/* #nandOutA:hover {
+    fill: #DA4567;
+    background-color: #DA4567;
+} */
