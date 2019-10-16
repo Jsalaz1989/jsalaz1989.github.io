@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Jsalaz1989/N2TClient/static/css/main.23a73ea3.chunk.css",
-    "main.js": "/Jsalaz1989/N2TClient/static/js/main.506f28bf.chunk.js",
-    "main.js.map": "/Jsalaz1989/N2TClient/static/js/main.506f28bf.chunk.js.map",
-    "runtime~main.js": "/Jsalaz1989/N2TClient/static/js/runtime~main.ceb8e93d.js",
-    "runtime~main.js.map": "/Jsalaz1989/N2TClient/static/js/runtime~main.ceb8e93d.js.map",
-    "static/js/2.b3eec9fb.chunk.js": "/Jsalaz1989/N2TClient/static/js/2.b3eec9fb.chunk.js",
-    "static/js/2.b3eec9fb.chunk.js.map": "/Jsalaz1989/N2TClient/static/js/2.b3eec9fb.chunk.js.map",
-    "index.html": "/Jsalaz1989/N2TClient/index.html",
-    "precache-manifest.4ae81b4567320ddbb924e3512c46b4b6.js": "/Jsalaz1989/N2TClient/precache-manifest.4ae81b4567320ddbb924e3512c46b4b6.js",
-    "service-worker.js": "/Jsalaz1989/N2TClient/service-worker.js",
-    "static/css/main.23a73ea3.chunk.css.map": "/Jsalaz1989/N2TClient/static/css/main.23a73ea3.chunk.css.map"
+    "main.css": "/my-app/static/css/main.23a73ea3.chunk.css",
+    "main.js": "/my-app/static/js/main.b78e10db.chunk.js",
+    "main.js.map": "/my-app/static/js/main.b78e10db.chunk.js.map",
+    "runtime~main.js": "/my-app/static/js/runtime~main.2bc77565.js",
+    "runtime~main.js.map": "/my-app/static/js/runtime~main.2bc77565.js.map",
+    "static/js/2.b3eec9fb.chunk.js": "/my-app/static/js/2.b3eec9fb.chunk.js",
+    "static/js/2.b3eec9fb.chunk.js.map": "/my-app/static/js/2.b3eec9fb.chunk.js.map",
+    "index.html": "/my-app/index.html",
+    "precache-manifest.3b79ebe29a3e9b04cb7dc90016f88dcc.js": "/my-app/precache-manifest.3b79ebe29a3e9b04cb7dc90016f88dcc.js",
+    "service-worker.js": "/my-app/service-worker.js",
+    "static/css/main.23a73ea3.chunk.css.map": "/my-app/static/css/main.23a73ea3.chunk.css.map"
   }
 }
