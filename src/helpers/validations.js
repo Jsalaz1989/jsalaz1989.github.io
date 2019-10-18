@@ -17,6 +17,7 @@ export const validateEmail = (value, userMustExist) => {
             method: 'POST',
             headers: {'Content-Type':'application/json'},
             body: value,
+            // mode: 'no-cors'
         })
             .then(response => response.json())
             .then(data => {
