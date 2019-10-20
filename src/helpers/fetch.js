@@ -1,8 +1,10 @@
 export function fetchPost(url, body, handleResponse) {
 
     console.log('Fetching from ' + url)
+
     
-    fetch('http://127.0.0.1:5000'+url, {
+    
+    fetch(process.env.REACT_APP_API_URL + url, {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(body),
