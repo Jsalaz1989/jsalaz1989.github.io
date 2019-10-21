@@ -127,7 +127,7 @@ const BaseAuthForm =  (props) => {
 				</Grid>
 				<Grid container {...GridContainerProps}>
 					<Grid item>
-						{props.alternateButton && <Icon icon={props.alternateButton.icon} helpText={props.alternateButton.helpText} nextPage={props.alternateButton.nextPage} />}
+						<Icon icon={props.alternateButton.icon} helpText={props.alternateButton.helpText} nextPage={props.alternateButton.nextPage} />
 						{/* {props.alternateButton && props.submitCount > 0 && !props.isSubmitting ? 
 							<Icon icon='help' helpText='Reset password?'/>
 							: 

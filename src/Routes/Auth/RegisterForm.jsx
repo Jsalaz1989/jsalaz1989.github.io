@@ -39,6 +39,7 @@ const RegisterForm = ({ history }) => {
             passwordCheck={true}
             onSubmit={registerUser}
             submitButtonText='Register'
+            alternateButton={{ icon: 'password', helpText: 'Password should be 6-8 characters', nextPage: null }}
         />
     )
 }
