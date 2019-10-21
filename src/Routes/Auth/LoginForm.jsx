@@ -48,7 +48,7 @@ const LoginForm = ({ history, setIsAuthenticated }) => {
             history={history}
             done={false}
             titleBefore='Log In'
-            textBefore='Enter an email and password'
+            textBefore="Enter an email and password (use 'guest@fake.com' and 'password123' to trial)"
             titleAfter='Success'
             textAfter={'Please wait while we log you in'}
             userMustExist={true}
