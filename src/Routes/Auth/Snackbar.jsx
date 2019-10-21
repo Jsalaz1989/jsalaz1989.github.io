@@ -39,11 +39,11 @@ export default function SimpleSnackbar() {
         ContentProps={{
           'aria-describedby': 'message-id',
         }}
-        message={<span id="message-id">Note archived</span>}
+        message={<span id="message-id">Use 'guest@fake.com' and 'password123' to trial</span>}
         action={[
-          <Button key="undo" color="secondary" size="small" onClick={handleClose}>
-            UNDO
-          </Button>,
+        //   <Button key="undo" color="secondary" size="small" onClick={handleClose}>
+        //     UNDO
+        //   </Button>,
           <IconButton
             key="close"
             aria-label="close"
