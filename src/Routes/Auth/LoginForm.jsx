@@ -5,7 +5,8 @@ import { fetchPost } from '../../helpers/fetch'
 
 const LoginForm = ({ history, setIsAuthenticated }) => {
 
-    const [helpButton, setHelpButton] = useState({ icon: 'password', helpText: 'Password should be 6-8 characters', nextPage: null })
+    const [helpButtonEmail, setHelpButtonEmail] = useState({ icon: 'email', helpText: 'Your email is your username', nextPage: null })
+    const [helpButtonPassword, setHelpButtonPassword] = useState({ icon: 'password', helpText: 'Password should be 6-8 characters', nextPage: null })
  
     function logInUser(values, actions) {
 
@@ -26,13 +27,16 @@ const LoginForm = ({ history, setIsAuthenticated }) => {
             else 
             {
                 console.log(data.errorMsg)
-                actions.setFieldError('password', data.errorMsg)
 
-                if (data.errorMsg === 'User not activated')
+                if (data.errorMsg === 'User not activated') {
+                    actions.setFieldError('email', data.errorMsg)
                     // setHelpButton({ icon: 'help', helpText: 'Resend activation link?', nextPage: '/registerUser?resendEmail=true&' })
-                    setHelpButton({ icon: 'help', helpText: 'Resend activation link?', nextPage: '/register?email='+values.email })
-                else if (data.errorMsg === 'Incorrect password')
-                    setHelpButton({ icon: 'help', helpText: 'Reset password?', nextPage: '/reset?email=' })
+                    setHelpButtonEmail({ icon: 'help', helpText: 'Resend activation link?', nextPage: '/register?email='+values.email })
+                }
+                else if (data.errorMsg === 'Incorrect password') {
+                    actions.setFieldError('password', data.errorMsg)
+                    setHelpButtonPassword({ icon: 'help', helpText: 'Reset password?', nextPage: '/reset?email=' })
+                }
             }
         }
 
@@ -51,7 +55,8 @@ const LoginForm = ({ history, setIsAuthenticated }) => {
             passwordCheck={false}
             onSubmit={logInUser}
             submitButtonText='Log In'
-            alternateButton={helpButton}
+            helpButtonEmail={helpButtonEmail}
+            helpButtonPassword={helpButtonEmail}
         />
     )
 }

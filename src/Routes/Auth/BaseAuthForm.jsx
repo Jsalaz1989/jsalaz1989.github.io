@@ -122,12 +122,12 @@ const BaseAuthForm =  (props) => {
 		return (
 			<Fragment>
 				<Grid container {...GridContainerProps}>
-					<Grid item><Icon icon='email' helpText='Your email is your username'/></Grid>
+					<Grid item><Icon icon={props.helpButtonEmail.icon} helpText={props.helpButtonEmail.helpText} nextPage={props.helpButtonEmail.nextPage} /></Grid>
 					<Grid item><Field {...EmailFieldProps} autoFocus={focusField === 'email'}/></Grid>
 				</Grid>
 				<Grid container {...GridContainerProps}>
 					<Grid item>
-						<Icon icon={props.alternateButton.icon} helpText={props.alternateButton.helpText} nextPage={props.alternateButton.nextPage} />
+						<Icon icon={props.helpButtonPassword.icon} helpText={props.helpButtonPassword.helpText} nextPage={props.helpButtonPassword.nextPage} />
 						{/* {props.alternateButton && props.submitCount > 0 && !props.isSubmitting ? 
 							<Icon icon='help' helpText='Reset password?'/>
 							: 
