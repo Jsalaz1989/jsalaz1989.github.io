@@ -31,7 +31,7 @@ const LoginForm = ({ history, setIsAuthenticated }) => {
                 if (data.errorMsg === 'User not activated') {
                     actions.setFieldError('email', data.errorMsg)
                     // setHelpButton({ icon: 'help', helpText: 'Resend activation link?', nextPage: '/registerUser?resendEmail=true&' })
-                    setHelpButtonEmail({ icon: 'help', helpText: 'Resend activation link?', nextPage: '/register?email='+values.email })
+                    setHelpButtonEmail({ icon: 'help', helpText: 'Resend activation link?', nextPage: '/register?email=' })
                 }
                 else if (data.errorMsg === 'Incorrect password') {
                     actions.setFieldError('password', data.errorMsg)
