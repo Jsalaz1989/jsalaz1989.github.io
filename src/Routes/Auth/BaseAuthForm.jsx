@@ -105,7 +105,7 @@ const BaseAuthForm =  (props) => {
 		const Icon = ({ icon, helpText, nextPage }) => {
 			return(
 				<Tooltip title={helpText} placement="left">
-					{icon !== 'help' ? 
+					{!nextPage ? 
 						<IconButton style={styles.iconButtonDisabled}>
 							{icon === 'email' && <AccountCircle style={styles.icon} />}
 							{icon === 'password' && <Lock style={styles.icon} />}
