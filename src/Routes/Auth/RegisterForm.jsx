@@ -39,8 +39,8 @@ const RegisterForm = ({ history }) => {
             textBefore={emailAvailable ? 'Reenter your password' : 'Enter an email and password'}
             titleAfter={emailAvailable ? 'Email resent' : 'Account registered'}
             textAfter={'An email has been sent to ' + emailSent + ' with an activation link'}
-            userMustExist={false}
-            passwordCheck={true}
+            userMustExist={emailAvailable ? true : false}
+            passwordCheck={emailAvailable ? false : true}
             onSubmit={registerUser}
             submitButtonText={emailAvailable ? 'Resend activation email' : 'Register'}
             helpButtonEmail={helpButtonEmail}
