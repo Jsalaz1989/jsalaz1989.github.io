@@ -56,7 +56,7 @@ const LoginForm = ({ history, setIsAuthenticated }) => {
             onSubmit={logInUser}
             submitButtonText='Log In'
             helpButtonEmail={helpButtonEmail}
-            helpButtonPassword={helpButtonEmail}
+            helpButtonPassword={helpButtonPassword}
         />
     )
 }
