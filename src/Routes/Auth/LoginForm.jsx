@@ -23,8 +23,8 @@ const LoginForm = ({ history, setIsAuthenticated }) => {
             }
             else 
             {
-                console.log('Incorrect password')
-                actions.setFieldError('password', 'Incorrect password')
+                console.log(data.errorMsg)
+                actions.setFieldError('password', errorMsg)
             }
         }
 
