@@ -102,7 +102,7 @@ const BaseAuthForm =  (props) => {
 			onFocus: () => validateOnTimeout(props.setFieldTouched, 'password', 5000),
 		}
 
-		const Icon = ({ icon, helpText }) => {
+		const Icon = ({ icon, helpText, nextPage }) => {
 			return(
 				<Tooltip title={helpText} placement="left">
 					{icon !== 'help' ? 
@@ -111,7 +111,7 @@ const BaseAuthForm =  (props) => {
 							{icon === 'password' && <Lock style={styles.icon} />}
 						</IconButton>
 						:
-						<IconButton style={styles.iconButtonEnabled} onClick={()=> props.history.push('/reset?email='+props.values.email)}>
+						<IconButton style={styles.iconButtonEnabled} onClick={ nextPage ? ()=> props.history.push(nextPage+props.values.email) : null }>
 							<Help style={{...styles.icon, ...styles.helpIcon}} />
 						</IconButton>
 					}
@@ -127,11 +127,12 @@ const BaseAuthForm =  (props) => {
 				</Grid>
 				<Grid container {...GridContainerProps}>
 					<Grid item>
-						{props.alternateButton && props.submitCount > 0 && !props.isSubmitting ? 
+						<Icon icon={props.alternateButton.icon} helpText={props.alternateButton.helpText} nextPage={props.alternateButton.nextPage} />
+						{/* {props.alternateButton && props.submitCount > 0 && !props.isSubmitting ? 
 							<Icon icon='help' helpText='Reset password?'/>
 							: 
 							<Icon icon='password' helpText='Password should be 6-8 characters'/>
-						}
+						} */}
 					</Grid>
 					<Grid item><Field {...PasswordFieldProps} autoFocus={focusField === 'password'} /></Grid>
 				</Grid>
@@ -182,10 +183,8 @@ const BaseAuthForm =  (props) => {
 	}
 
 	function focusNext(values) {
-		if (values.email === '')
-			setFocusField('email')
-		else if (values.password === '')
-			setFocusField('password')
+		if      (values.email === '')           setFocusField('email')
+		else if (values.password === '')		setFocusField('password')
 	}
 
 	return (
