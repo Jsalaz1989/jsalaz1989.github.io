@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import BaseAuthForm from './BaseAuthForm';
 import { fetchPost } from '../../helpers/fetch'
+import SimpleSnackbar from './Snackbar';
 
 
 const LoginForm = ({ history, setIsAuthenticated }) => {
@@ -44,20 +45,23 @@ const LoginForm = ({ history, setIsAuthenticated }) => {
     }
     
     return (
-        <BaseAuthForm 
-            history={history}
-            done={false}
-            titleBefore='Log In'
-            textBefore="Enter an email and password (use 'guest@fake.com' and 'password123' to trial)"
-            titleAfter='Success'
-            textAfter={'Please wait while we log you in'}
-            userMustExist={true}
-            passwordCheck={false}
-            onSubmit={logInUser}
-            submitButtonText='Log In'
-            helpButtonEmail={helpButtonEmail}
-            helpButtonPassword={helpButtonPassword}
-        />
+        <>
+            <SimpleSnackbar></SimpleSnackbar>
+            <BaseAuthForm 
+                history={history}
+                done={false}
+                titleBefore='Log In'
+                textBefore='Enter an email and password'
+                titleAfter='Success'
+                textAfter={'Please wait while we log you in'}
+                userMustExist={true}
+                passwordCheck={false}
+                onSubmit={logInUser}
+                submitButtonText='Log In'
+                helpButtonEmail={helpButtonEmail}
+                helpButtonPassword={helpButtonPassword}
+            />
+        </>
     )
 }
 
